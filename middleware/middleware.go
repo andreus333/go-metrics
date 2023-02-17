@@ -39,8 +39,6 @@ func (lm *MetricsMiddleware) Metrics(next http.Handler) http.Handler {
 	})
 }
 
-// responseWriterInterceptor is a simple wrapper to intercept set data on a
-// ResponseWriter.
 type responseWriterInterceptor struct {
 	http.ResponseWriter
 	statusCode int
